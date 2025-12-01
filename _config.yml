@@ -1,4 +1,4 @@
 deploy:
   type: git
-  repository: git@github.com:liyunchen/liyunchen.github.io.git
+  repository: git@github.com:platinumist/platinumist.github.io.git
   branch: main
