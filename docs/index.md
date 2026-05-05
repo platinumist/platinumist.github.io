@@ -1,6 +1,7 @@
-# Welcome to MkDocs
+# Welcome to platinumist's world
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+这里是用来存放学习资料的仓库，测试
+123
 
 ## Commands
 
