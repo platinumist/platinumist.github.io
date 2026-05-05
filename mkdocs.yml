@@ -1,0 +1,24 @@
+site_name: 你的名字的资料库
+theme:
+  name: material
+  language: zh  # 设置为中文
+  palette: 
+    # 颜色配置，可以根据喜好修改主色调
+    - primary: indigo
+      accent: cyan
+  features:
+    - navigation.tabs : true   # 开启顶部选项卡
+    - search.suggest     # 搜索建议
+    - search.highlight   # 搜索高亮
+
+markdown_extensions:
+  - pymdownx.arithmatex: # LaTeX 公式支持
+      generic: true
+  - pymdownx.highlight:   # 代码高亮
+      anchor_linenums: true
+  - pymdownx.superfences: # 支持嵌套复杂内容
+  - toc:
+      permalink: true    # 标题旁显示锚点链接
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
