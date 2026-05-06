@@ -7,7 +7,7 @@ theme:
     - primary: indigo
       accent: cyan
   features:
-    - navigation.tabs : true   # 开启顶部选项卡
+    - navigation.tabs: true   # 开启顶部选项卡
     - search.suggest     # 搜索建议
     - search.highlight   # 搜索高亮
 
