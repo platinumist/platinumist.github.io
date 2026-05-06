@@ -1,4 +1,4 @@
-# Welcome to platinumist's world。
+# **Welcome to platinumist's world。**
 
 这里是用来存放学习资料的仓库网站。
 
