@@ -23,7 +23,8 @@ markdown_extensions:
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
 nav:
-  - 🏠 首页: index.md
+  - 🏠 首页: 
+      - 一点点介绍: index.md
   - 📐 数理基础课:
       - 微积分（甲）Ⅰ: 微积分（甲）Ⅰ笔记.md
       - 线性代数: 线性代数（甲）笔记.md
