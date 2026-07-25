@@ -7,21 +7,22 @@ theme:
     - primary: indigo
       accent: cyan
   features:
-    - navigation.tabs  # 开启顶部选项卡
-    - search.suggest     # 搜索建议
-    - search.highlight   # 搜索高亮
+    - navigation.tabs     # 开启顶部选项卡
+    - search.suggest      # 搜索建议
+    - search.highlight    # 搜索高亮
 
 markdown_extensions:
-  - pymdownx.arithmatex: # LaTeX 公式支持
+  - pymdownx.arithmatex:  # LaTeX 公式支持
       generic: true
-  - pymdownx.highlight:   # 代码高亮
+  - pymdownx.highlight:    # 代码高亮
       anchor_linenums: true
-  - pymdownx.superfences: # 支持嵌套复杂内容
+  - pymdownx.superfences:  # 支持嵌套复杂内容
   - toc:
-      permalink: true    # 标题旁显示锚点链接
+      permalink: true     # 标题旁显示锚点链接
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+
 nav:
   - 🏠 首页: 
       - 一点点介绍: index.md
@@ -34,16 +35,16 @@ nav:
       - 大学物理（甲）Ⅰ: 大学物理（甲）Ⅰ资料.md
   - 🧪 专业基础课:
       - 有机化学:
-          - 第一到三章.md
-          - 第四章.md
-          - 第五章.md
-      - 大化实验（O）:大化实验（O）资料.md
-  - 🧷 专业课：
-      - 高分子化学： 高分子化学资料.md
-      - 高分子物理： 高分子物理资料.md
-      - 高分子材料： 高分子材料资料.md
+          - 第一到三章: 第一到三章.md
+          - 第四章: 第四章.md
+          - 第五章: 第五章.md
+      - 大化实验（O）: 大化实验（O）资料.md
+  - 🧷 专业课:
+      - 高分子化学: 高分子化学资料.md
+      - 高分子物理: 高分子物理资料.md
+      - 高分子材料: 高分子材料资料.md
   - 📚 其他资源:
-      - 杂物：rubbish.md
+      - 杂物: rubbish.md
 
       
 
