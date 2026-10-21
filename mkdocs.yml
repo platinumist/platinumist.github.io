@@ -2,10 +2,10 @@ site_name: platinumist 的资料库
 theme:
   name: material
   language: zh  # 设置为中文
-  palette: 
-    # 颜色配置，可以根据喜好修改主色调
-    - primary: indigo
-      accent: cyan
+  font: false  # 使用本地字体
+  palette:
+    - primary: custom
+      accent: custom
   features:
     - navigation.tabs     # 开启顶部选项卡
     - search.suggest      # 搜索建议
@@ -23,10 +23,13 @@ markdown_extensions:
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
 
+extra_css:
+  - assets/stylesheets/archive.css
+
 nav:
-  - 🏠 首页: 
-      - 一点点介绍: index.md
-  - 📐 数理基础课:
+  - 首页:
+      - 课程索引: index.md
+  - 数理基础课:
       - 微积分（甲）Ⅰ: 微积分（甲）Ⅰ资料.md
       - 微积分（甲）Ⅱ: 微积分（甲）Ⅱ资料.md
       - 线性代数: 线性代数（甲）资料.md
@@ -35,7 +38,7 @@ nav:
       - 大学物理（甲）Ⅰ: 大学物理（甲）Ⅰ资料.md
       - 大学物理（甲）Ⅱ: 大学物理（Ⅱ）资料.md
       - 工程图学: 工程图学资料.md
-  - 🧪 专业基础课:
+  - 专业基础课:
       - 有机化学:
           - 资料说明: 有机化学资料.md
           - 封面与目录: 有机化学目录.md
@@ -67,12 +70,9 @@ nav:
           - "第五章 热力学第二定律与熵": 物理化学第五章.md
           - "第六章 热力学基本方程": 物理化学第六章.md
           - "核心公式速查": 物理化学核心公式速查.md
-  - 🧷 专业课:
+  - 专业课:
       - 高分子化学: 高分子化学资料.md
       - 高分子物理: 高分子物理资料.md
       - 高分子材料: 高分子材料资料.md
-  - 📚 其他资源:
+  - 其他资源:
       - 杂物: rubbish.md
-
-      
-
