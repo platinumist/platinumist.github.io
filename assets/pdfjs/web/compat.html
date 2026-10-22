@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self' blob:; style-src 'self'; img-src 'self' blob: data:; font-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+    <title>PDF 预览</title>
+    <link rel="stylesheet" href="compat.css?v=1">
+    <script src="compat.mjs?v=1" type="module"></script>
+  </head>
+  <body>
+    <nav class="toolbar" aria-label="PDF 阅读工具">
+      <button id="previous" type="button" disabled>上一页</button>
+      <label for="page-number">页码</label>
+      <input id="page-number" type="number" min="1" value="1" inputmode="numeric" disabled>
+      <span class="page-total">/ <span id="page-total">—</span></span>
+      <button id="next" type="button" disabled>下一页</button>
+      <label class="zoom-label" for="zoom">缩放</label>
+      <select id="zoom" disabled>
+        <option value="fit">适合宽度</option>
+        <option value="1">100%</option>
+        <option value="1.25">125%</option>
+        <option value="1.5">150%</option>
+        <option value="2">200%</option>
+      </select>
+    </nav>
+    <p id="status" role="status" aria-live="polite">正在加载 PDF…</p>
+    <main id="page-area" aria-label="PDF 页面">
+      <canvas id="page-canvas" role="img" aria-label="PDF 页面" hidden></canvas>
+    </main>
+    <noscript>请启用 JavaScript 以预览 PDF。</noscript>
+  </body>
+</html>
