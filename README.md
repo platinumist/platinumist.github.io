@@ -39,3 +39,13 @@ git diff
 构建通过后，提交需要发布的源文件并推送到 `main`。GitHub Actions 自动发布到 GitHub Pages。
 
 本地和 CI 使用 `requirements.txt` 中的同一组版本。`.venv/` 和 `site/` 由 Git 忽略。
+
+## PDF 浏览器兼容
+
+`docs/assets/pdfjs/web/compatibility.js` 检查查看器所需的 CSS 能力；缺少支持时自动使用 `compat.html` 简化预览，支持翻页与缩放。
+
+简化预览的界面和绘制逻辑分别在 `compat.css`、`compat.mjs`，使用仓库内同一份 PDF.js 和 PDF。普通查看器地址加上 `&compat=1` 可手动测试，例如：
+
+```text
+/assets/pdfjs/web/viewer.html?file=../../pdfs/physical-chemistry/ch01.pdf&compat=1
+```
