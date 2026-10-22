@@ -1,0 +1,14 @@
+/* Keep the reading controls and Tools > Save visible in narrow course embeds. */
+@media all and (max-width: 560px) {
+  #editorModeButtons,
+  #editorModeSeparator {
+    display: none;
+  }
+}
+
+/* A mix containing currentColor cannot be resolved at build time. */
+@supports not (color: color-mix(in srgb, black, white)) {
+  :root {
+    --button-hover-color: light-dark(rgb(12 12 13 / 17%), rgb(249 249 250 / 17%));
+  }
+}

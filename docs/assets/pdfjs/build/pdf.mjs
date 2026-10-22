@@ -7875,8 +7875,14 @@ function setLayerDimensions(div, viewport, mustFlip = false, mustRotate = true) 
     const {
       style
     } = div;
-    const widthStr = `round(down, var(--total-scale-factor) * ${pageWidth}px, var(--scale-round-x))`,
-      heightStr = `round(down, var(--total-scale-factor) * ${pageHeight}px, var(--scale-round-y))`;
+    // Local compatibility patch: older mobile engines do not support CSS round().
+    const supportsRound = globalThis.CSS?.supports("width", "round(down, 10px, 1px)");
+    const widthStr = supportsRound
+      ? `round(down, var(--total-scale-factor) * ${pageWidth}px, var(--scale-round-x))`
+      : `calc(var(--total-scale-factor) * ${pageWidth}px)`,
+      heightStr = supportsRound
+        ? `round(down, var(--total-scale-factor) * ${pageHeight}px, var(--scale-round-y))`
+        : `calc(var(--total-scale-factor) * ${pageHeight}px)`;
     if (!mustFlip || viewport.rotation % 180 === 0) {
       style.width = widthStr;
       style.height = heightStr;

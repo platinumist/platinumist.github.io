@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "description": "Optional maintenance tools for the bundled PDF.js viewer",
+  "scripts": {
+    "build:pdf-css": "node build-pdf-viewer-css.cjs"
+  },
+  "devDependencies": {
+    "lightningcss": "1.30.2"
+  }
+}

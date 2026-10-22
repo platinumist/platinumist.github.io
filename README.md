@@ -42,10 +42,15 @@ git diff
 
 ## PDF 浏览器兼容
 
-`docs/assets/pdfjs/web/compatibility.js` 检查查看器所需的 CSS 能力；缺少支持时自动使用 `compat.html` 简化预览，支持翻页与缩放。
+PDF 使用仓库内完整的 PDF.js 查看器，手机上的保存按钮位于右上角的“工具”菜单。保存的是原始 PDF。
 
-简化预览的界面和绘制逻辑分别在 `compat.css`、`compat.mjs`，使用仓库内同一份 PDF.js 和 PDF。普通查看器地址加上 `&compat=1` 可手动测试，例如：
+查看器加载 `docs/assets/pdfjs/web/viewer-compatible.css`，由原始 `viewer.css` 和本站的 `viewer-overrides.css` 转换而来，展开嵌套选择器并转换颜色语法。窄屏隐藏批注工具，为阅读和保存菜单留出位置。`build/pdf.mjs` 的 `setLayerDimensions` 为不支持 CSS `round()` 的浏览器改用 `calc()` 设置页面尺寸。
 
-```text
-/assets/pdfjs/web/viewer.html?file=../../pdfs/physical-chemistry/ch01.pdf&compat=1
+日常修改笔记仍按上面的 MkDocs 流程操作。仅升级 PDF.js 或修改上述查看器样式时，需要安装 Node.js、pnpm 并重新生成兼容样式：
+
+```powershell
+pnpm --dir tools install --frozen-lockfile
+pnpm --dir tools run build:pdf-css
 ```
+
+生成的 CSS 随仓库提交，网站构建不需要 Node.js。升级 PDF.js 时也要重新检查并保留上述尺寸补丁。
