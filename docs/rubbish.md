@@ -1,1 +1,1 @@
-nothing.
+如果感兴趣，可以看看这个轻小说网站：<https://platinumist.github.io/lightnovel-bookshelf/>
